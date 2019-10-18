@@ -1,0 +1,16 @@
+.img{
+    margin-left: auto;
+    margin-right: auto;
+    align-self: auto;
+} 
+body {
+    background: #e4e3dcf8;
+    color: rgb(68, 212, 212);
+    margin:0%;
+  }
+  .box{
+    /* background: #eeede4; */
+    overflow: auto;
+    padding:10px 10px 10px 20px ;
+    margin:0%;
+  }

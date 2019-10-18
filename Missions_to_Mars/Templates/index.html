@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mission To Mars</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"></head>
+    <link rel="stylesheet" href="../static/style.css">
+    <body>
+    <div class="container-fluid">
+        <div class="jumbotron text-center">
+        <h1><b>Mission To Mars</b></h1>
+        <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+         </div>
+        </div>
+        <div class="px-5">
+            <h2>Latest Mars News </h2>
+            <h4>{{ data.News_Title}}</h4>
+            <h5>{{ data.News_Paragraph }}</h5>
+        	</div>
+        </div>
+        <div class ="row" id="mars-image">
+            	<div class = "col-md-6">
+                <h2>Featured Mars Image</h2>
+                <img class="img-fluid w-100" src = "{{data.Featured_Image}}" alt = "Featured Image">
+            </div>
+ <div class="col-3">
+                    <div class="card mb-4">
+                        <h5 class="card-header bg-transparent ">Current Weather on Mars</h5>
+
+                        <div class="card-body container">
+
+                            <div>
+                                {{ data.Mars_Weather }}
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <h4>Mars Facts</h4>{{data.Mars_Facts | safe}}
+                    
+                </div>
+        </div>
+        
+        <br><hr><br>
+    <div>
+        <h2 style="text-align: center;"><b>Mars Hemispheres</b></h2>
+                        <div class = "thumbnail"></div>
+                        <div class = "col-md-3"></div>
+                        {% for h in data.hemisphere_image_urls %}
+                            <img class="img-fluid" src = {{img["img_url"]}} alt = "Hemisphere_image">
+                                <h3>{{img[title]}}</h3>
+                            </div>
+                        </div>
+                {% endfor %}
+        </div>
+</body>
+</html>
+                    

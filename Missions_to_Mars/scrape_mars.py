@@ -58,8 +58,8 @@ def scrape_info():
     # In[152]:
 
 
-    news_p = soup.find("div", class_ ="article_teaser_body").text
-    news_p
+    news_p = soup.find("div", class_ ="article_teaser_body")
+    print (news_p.text)
 
 
     # In[153]:
